@@ -1,0 +1,292 @@
+<! DOCKTYPE html>
+<html>
+<head>
+      <title>shopasky.com</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="Gadgets, mobiles, tablets, tv,desktops,forum" />
+      <meta name="description" content="Ask questions about any gadget. Before you will purchase the product ask the advantages and disadvantages of the product.  Your popularity will automatically increased when your answer will thumb up." />
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>	
+        <script src="source/socket.js"></script>
+	    <script type="text/javascript" src="source/js/jquery.loadingbar.js"></script>
+	    <link rel="stylesheet" type="text/css" href="source/css/loadingbar.css" />
+        <link rel="stylesheet" type="text/css" href="source/css/elusive-webfont.css" />		
+		<link rel="stylesheet" type="text/css" href="source/website/css/new_index.css" />	
+       <script type="text/javascript" src="source/website/js/new_index.js"></script>
+	    <script src="source/tags/js/materialize-tags.js"></script>		
+   <link rel="stylesheet" type="text/css" href="source/tags/css/materialize-tags.css" />
+	   
+</head>
+
+<body>
+<div class="row">
+     <div class="col m12 l12 s12">
+          <div class="header transparent">		 
+            <center><h4 class="web_head">shopasky.com<span class="beta">beta</span></h4></center>
+			  
+			  <div class="btn_box">
+			  <a href="#login_box" class="btn waves-effect waves-light modal-trigger" id="login">Login</a></center><br>
+				 <a href="#sign_up" id="sign"  class="btn waves-effect waves-light red modal-trigger "id="sign">Signup</a>
+			  </div>
+         </div>
+	 </div>
+     </div>
+
+  <div id="parallax" class="parallax-container">
+    <div class="parallax"><img src="images/gadget.jpg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <center><h2 class="header">A Community of Gadget Lovers</h2></center>
+      <center><p class="grey-text text-darken-3 lighten-3">Whenever you desired to buy a gadget. First check its ground reality. Personalised content as we will get to know what interests... you and we care for that! Explore about products at its ground reality. </p></center>
+    </div>
+  </div>
+  
+<br><br>
+<center><button  id="ask_here" class="btn waves-effect waves-light">Ask Now</button></center><br><br>
+  <! first list starts>
+  <ul id="show_list">
+  <li>
+    <img id="query" class="right_img" src="images/query.png" width="200" height="200" alt="query"/>
+  <div class="left_div">
+   <center><h5 class="list_heading">Your queries</h5></center>
+   <center><p class="list_para">Communities helps you to fulfil your query at its core reality.</p></center>
+  </div>
+
+  </li>
+  </ul>
+  <! list ends>
+  
+  <! second list start>
+  <ul id="show_list_2">
+  <li>
+    <img id="share" class="left_img" src="images/share_icon.png" width="200" height="200" alt="share"/>
+  <div class="right_div">
+   <center><h5 class="list_heading">Share shopping interest</h5></center>
+   <center><p class="list_para">Communities helps you to share your interests.</p></center>
+  </div>
+   
+  </li>
+  </ul>
+  
+  <! second ends>
+  
+ 
+ <! third list start>
+  <ul id="show_list_3">
+  <li>
+  
+     <img id="explore" class="right_img" src="images/explore.png" width="200" height="200" alt="explore"/>
+    <div id="third_div">
+   <center><h5 class="list_heading">Explore</h5></center>
+   <center><p class="list_para">Communities helps you to explore the best products across the globe. </p></center>
+  </div>
+
+   
+  </li>
+  </ul>
+  
+  <! third ends>
+  
+   
+  
+  <br><br><br> 
+   <center>
+  <div id="ask_box" class="ask_box">
+           <div class="card white"><div id="ans_div" class="card-content black-text"><span  class="card-title">Ask Here</span>
+        
+          <div class="row">
+           <div class="input-field col s12">
+          <input id="ques_title" type="text" >
+          <label for="password">Question title</label>
+        </div>
+        </div>
+		
+         <div class="row">
+           <div class="input-field col s12">
+          <input  type="email" id="user_email_id" class="validate">
+          <label for="email_id">E-mail</label>
+        </div>
+        </div>
+		
+		 <div class="row">
+			  <div class="input-field col s12">
+        	    <input id="tags"   value="" data-role="materialtags" />
+				<label for="tags">Tags (Press ENTER after input)</label>
+				
+			  </div>	
+		    </div>
+			
+</div>
+ <center><button class="btn waves-effect waves-light" onclick="save_temp()">Ask without signup</button></center>
+ 
+ <br>
+</div>
+  </div>
+  </center>
+ 
+  <br><br><br><br>       
+ <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">shopasky.com<span class="beta">beta</span></h5>
+                
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a href="/about" class="grey-text text-lighten-3">About</a></li>
+                  <li><a class="grey-text text-lighten-3">Contact US</a></li>
+                  <li><a class="grey-text text-lighten-3">Privacy policy</a></li>
+                  <li><a class="grey-text text-lighten-3">Terms of service</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright 
+            
+            </div>
+          </div>
+        </footer>
+		
+		<div id="sign_up" class="modal">
+<div class="modal-header"><center><h3>Sign Up</h3></center></div>
+    <div class="modal-content">
+	      <div class="row">
+    
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+	  
+	  <div class="row">
+        <div class="input-field col s12">
+          <input id="confirm_password" type="password" class="validate">
+          <label for="confirm_password">Confirm Password</label>
+        </div>
+      </div>
+	  
+	  
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+	  
+	  <div class="row">
+        <div class="input-field col s6">
+           <p>
+           <input name="gender" value="male"  type="radio" id="male" checked="true" />
+           <label for="male">Male</label>
+          
+           
+            <input name="gender" value="female"  type="radio" id="female" />
+            <label for="female">Female</label>
+            </p>
+          
+        </div>
+      </div>
+	  <div class="row">
+	    <div class="col 12 s12 m12">
+               <center><button id="submit" class="btn-large waves-effect waves-light">Save and Continue</button></center>
+			   
+			   <span id="load" class="loader"><div   class="preloader-wrapper small active">
+                   <div class="spinner-layer spinner-teal-only">
+                   <div class="circle-clipper left">
+                      <div class="circle"></div>
+                       </div><div class="gap-patch">
+                 <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                        </div>
+                      </div>
+                 </div></span>
+		 </div>   
+		
+		</div>
+  </div>
+			 
+			    
+			 
+		 </div>
+		 
+		 
+	</div>
+<! sign up modal close>
+
+
+
+<div id="login_box" class="modal">
+  <div class="modal-content">
+  
+   <center><h4>Login</h4></center>
+   <div class="row">
+    
+      <div class="row">
+       <div class="input-field col s12">
+          <input id="user_email" type="email">
+          <label for="user_email">E-mail</label>
+        </div>
+        
+      </div>
+      
+	   <div class="row">
+       <div class="input-field col s12">
+          <input id="user_password" type="password">
+          <label for="user_password">Password</label>
+		  <a id="forgot">I forgot my password</a>
+        </div>
+        
+      </div>
+	  
+	 <center><button id="login_event" class="btn waves-effect waves-light">Login</button></center> 
+	  
+  </div>
+	  
+  </div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1867176583550873',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
